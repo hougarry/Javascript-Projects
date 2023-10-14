@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Contact Form To Email Using Javascript</title>
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>Contact with Me</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="text" id="phone" placeholder="Your Phone Number" required>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Leave your message here"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "hougarry@gmail.com",
+                Password : "5ADE1700702CFE7D0F6C76130AEC8DD4B3EF",
+                To : 'hougarry@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enqury",
+                Body : "And this is the body"
+            }).then(
+              message => alert(message)
+            );
+        }
+    </script>
+</body>
+</html>
