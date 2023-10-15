@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Contact Form To Email Using Javascript</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('yuCcGjmpcWOZcdfxJ');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('service_qloxods', 'template_wpl9rz7', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                        alert('Email sent successfully!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        alert('Failed to send email. See the console for more details.');
+                    });
+            });
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form id="contact-form">
+            <h3>Contact with Me</h3>
+            <span class="title">Name:</span>
+            <input type="text" id="sendername" name="sendername" placeholder="Your name" required>
+        
+            <span class="title">Email: hougarry@gmail.com</span>
+            <input type="text" id="to" name="to" placeholder="To (Email)" required>
+        
+            <span class="title">Subject:</span>
+            <input type="text" id="subject" name="subject" placeholder="Your subject" required>
+        
+            <span class="title">Your Email:</span>
+            <input type="text" id="replyto" name="replyto" placeholder="Reply To (Input your Email)" required>
+        
+            <span class="title">Message</span>
+            <textarea id="message" name="message" cols="30" rows="10" placeholder="After auto-reply from my google email, I will reply to you as soon as possible" required></textarea>
+            
+            <input type="hidden" name="contact_number">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
