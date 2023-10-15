@@ -6,29 +6,7 @@
     <link rel="stylesheet" href="./style.css">
     <title>Contact Form To Email Using Javascript</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('yuCcGjmpcWOZcdfxJ');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                this.contact_number.value = Math.random() * 100000 | 0;
-                emailjs.sendForm('service_qloxods', 'template_wpl9rz7', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                        alert('Email sent successfully!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                        alert('Failed to send email. See the console for more details.');
-                    });
-            });
-        }
-        
-    </script>
+    <script src="./script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -38,7 +16,7 @@
             <input type="text" id="sendername" name="sendername" placeholder="Your name" required>
         
             <span class="title">Email: hougarry@gmail.com</span>
-            <input type="text" id="to" name="to" placeholder="To (Email)" required>
+            <input type="text" id="to" name="to" placeholder="To (hougarry@gmail.com)" required>
         
             <span class="title">Subject:</span>
             <input type="text" id="subject" name="subject" placeholder="Your subject" required>
