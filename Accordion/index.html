@@ -7,6 +7,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="accordion">
+        <div class="ac-contentBox">
+            <div class="ac-label">List One</div>
+            <div class="ac-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. sdfjld 
+                    sdfsdfs sdf;lsdf sd;f;s sdfl;ksdf ;sdfl 
+                </p>
+            </div> 
+        </div>
+        <div class="ac-contentBox">
+            <div class="ac-label">List Two</div>
+            <div class="ac-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. sdfjld 
+                    sdfsdfs sdf;lsdf sd;f;s sdfl;ksdf ;sdfl 
+                </p>
+            </div>
+        </div>
+        <div class="ac-contentBox">
+            <div class="ac-label">List Three</div>
+            <div class="ac-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. sdfjld 
+                    sdfsdfs sdf;lsdf sd;f;s sdfl;ksdf ;sdfl 
+                </p>
+            </div>
+        </div>
+        <div class="ac-contentBox">
+            <div class="ac-label">List Four</div>
+            <div class="ac-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. sdfjld 
+                    sdfsdfs sdf;lsdf sd;f;s sdfl;ksdf ;sdfl 
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const accordion = document.getElementsByClassName('ac-contentBox');
+
+        for(i = 0; i <accordion.length; i++){
+            accordion[i].addEventListener('click',function(){
+                this.classList.toggle('active')
+            })
+        }
+    </script>
 </body>
 </html>
+
+
+
+
+
+
