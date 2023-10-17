@@ -5,16 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  type="text/css" rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Tab-layout</title>
 </head>
 <body>
-    <div class="hero">
+    <div class="hero-tab">
         <div class="btn-box">
-            <button>Frontend-Project</button>
-            <button>Backend-Project</button>
-            <button>Fullstack-Project</button>
-
+            <button class="boxbtn1" onclick="openHTML()"><i class="fa-brands fa-html5"></i>HTML</button>
+            <button class="boxbtn2" onclick="openCSS()"><i class="fa-brands fa-css3-alt"></i>CSS</button>
+            <button class="boxbtn3" onclick="openJS()"><i class="fa-brands fa-codepen"></i>JAVASCRIPT</button>
+        </div>
+        <div class="content" id="content1">
+            <div class="content-left">
+                <h1>HTML</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. sdfjld 
+                    sdfsdfs sdf;lsdf sd;f;s sdfl;ksdf ;sdfl 
+                </p>
+                <a href="#">Watch Video</a>
+            </div>
+            <div class="content-right">
+                <img src="">
+            </div>
+        </div>
+        <div class="content" id="content2">
+            <div class="content-left">
+                <h1>CSS</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. sdfjld 
+                    sdfsdfs sdf;lsdf sd;f;s sdfl;ksdf ;sdfl 
+                </p>
+                <a href="#">Watch Video</a>
+            </div>
+            <div class="content-right">
+                <img src="">
+            </div>
+        </div>
+        <div class="content" id="content3">
+            <div class="content-left">
+                <h1>JAVASCRIPT</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. sdfjld 
+                    sdfsdfs sdf;lsdf sd;f;s sdfl;ksdf ;sdfl 
+                </p>
+                <a href="#">Watch Video</a>
+            </div>
+            <div class="content-right">
+                <img src="">
+            </div>
         </div>
     </div>
+    <script>
+        var content1 = document.getElementById("content1");
+        var content2 = document.getElementById("content2");
+        var content3 = document.getElementById("content3");
+        var boxbtn1 = document.getElementById("boxbtn1");
+        var boxbtn2 = document.getElementById("boxbtn2");
+        var boxbtn3 = document.getElementById("boxbtn3");
+
+        function openHTML() {
+            content1.style.transform = "translateX(0px)";
+            content2.style.transform = "translateX(100%)";
+            content3.style.transform = "translateX(100%)";
+        }
+
+        function openCSS() {
+            content1.style.transform = "translateX(100%)";
+            content2.style.transform = "translateX(0px)";
+            content3.style.transform = "translateX(100%)";
+        }
+
+        function openJS() {
+            content1.style.transform = "translateX(100%)";
+            content2.style.transform = "translateX(100%)";
+            content3.style.transform = "translateX(0px)";
+        }
+    </script>
 </body>
 </html>
+
