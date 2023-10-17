@@ -5,17 +5,19 @@
 }
 
 .hero-tab {
-  overflow: hidden !important;
+  overflow: hidden;
   width: 80%;
   height: 450px;
   position: relative;
   margin: 100px auto;
 }
 .hero-tab .btn-box {
+  justify-content: center;
   display: flex;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 3px solid #f50e0e;
 }
 .hero-tab .btn-box button {
+  font-size: 20px;
   background: transparent;
   border: none;
   outline: none;
@@ -24,18 +26,16 @@
   margin-right: 20px;
   font-weight: bold;
 }
-.hero-tab .btn-box button i {
+.hero-tab .btn-box button .fa-brands {
   margin-right: 20px;
 }
-.hero-tab .btn-box button:hover, .hero-tab .btn-box .fa {
-  color: #058aa1;
+.hero-tab .btn-box button:hover {
+  color: #a10505;
 }
-.hero-tab .btn-box .boxbtn1 {
-  color: #058aa1;
+.hero-tab .btn-box button:last-child {
+  margin-right: 0;
 }
 .hero-tab .content {
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,15 +51,17 @@
   padding: 30px 0;
 }
 .hero-tab .content .content-left a {
-  display: block;
   text-decoration: none;
-  color: #0b064d;
+  color: #f1f1f1;
   font-weight: bold;
+  display: inline-block;
   width: 100px;
   margin-top: 20px;
-  padding: 9px 5px;
-  background-color: #19cff0;
+  padding: 10px 20px;
+  background-color: #f01439;
   border-radius: 15px;
+  transition: all 0.3s ease;
+  text-align: center;
 }
 .hero-tab .content .content-right {
   flex-basis: 50%;
