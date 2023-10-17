@@ -5,15 +5,17 @@
 }
 
 .hero-tab{
-    overflow: hidden !important;
+    overflow: hidden;
     width: 80%;
     height: 450px;
     position: relative;
     margin: 100px auto;   
     .btn-box{
+        justify-content: center;
         display: flex;
-        border-bottom: 1px solid #aaa;
+        border-bottom: 3px solid #f50e0e;
         button{
+            font-size: 20px;
             background: transparent;
             border: none;
             outline: none;
@@ -21,22 +23,18 @@
             cursor: pointer;
             margin-right: 20px;
             font-weight: bold;
-            i{
+            .fa-brands {
                 margin-right: 20px;
             }
         }
-
-        button:hover, .fa{
-            color: #058aa1;
+        button:hover{
+            color: #a10505;
         }
-        .boxbtn1{
-            color: #058aa1;
+        button:last-child {  // Target the last button and remove the margin-right
+            margin-right: 0;
         }
-
     }
     .content{
-        top: 0;
-        left: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -50,15 +48,17 @@
                 padding: 30px 0;    
             }
             a{
-                display: block;
                 text-decoration: none;
-                color: #0b064d;
+                color: #f1f1f1;
                 font-weight: bold;
+                display: inline-block;
                 width: 100px;
                 margin-top: 20px;
-                padding: 9px 5px;
-                background-color: #19cff0;
+                padding: 10px 20px;
+                background-color: #f01439;
                 border-radius: 15px;
+                transition: all 0.3s ease;
+                text-align: center;
             }
         }
         .content-right{
