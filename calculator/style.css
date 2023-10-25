@@ -1,0 +1,52 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #38a538, #27d3b6);
+}
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+}
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid #fff;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+.calculator-grid > button:hover{
+    background-color: rgba(255, 255, 255, .9);
+}
+.span-two{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1 / -1; /* this is to span the output to all the columns */
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end; /* this is to align the text to the bottom */
+    justify-content: space-around; /* this is to have the text in the center */
+    flex-direction: column; /* this is to have the text in the center */
+    padding: 10px; /* this is to have the text in the center */
+    word-wrap: break-word; /* to break the text in the next line */
+    word-break: break-all; 
+}
+.output .previous-operand{
+    color: rgba(255, 255, 255, 0.822);
+    font-size: 1.5rem;
+}
+.output .current-operand{
+    color: #fff;
+    font-size: 2.5rem;
+}
