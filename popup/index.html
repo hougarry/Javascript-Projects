@@ -9,10 +9,12 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <button>Signal Details You don't know</button>
-    <div class="detail" id="detail">
-        <div class="detail-header"></div>
-        <button class="close-button">&times;</button>
+    <button data-detail-target="#detail">Signal Details You don't know</button>
+    <div class="detail " id="detail">
+        <div class="detail-header">Typing Signals
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        
         <div class="detail-body">
             & is called an entity, pronounce as "and". It is used to display special characters in HTML.
             &times; is used to display the multiplication sign.
@@ -29,7 +31,7 @@
             # is pronounced as "hash". It is different from the hash sign used in URLs. C# is pronounced as "C sharp".
         </div>
     </div>
-    <div class="overlay"></div>
+    <div id="overlay"></div>
 
 </body>
 </html>
