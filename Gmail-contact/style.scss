@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://www.iam-creative.co.uk/wp-content/uploads/2015/04/iam-creative-website-background.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 40px;
+        border-radius: 10px;
+        max-width: 500px;
+        width: 100%;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+        h3 {
+            color: rgb(10, 27, 177);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: rgb(14, 69, 219);
+            color: #fff;
+            font-size: 1.2rem;
+            border: 0;
+            cursor: pointer;
+            border-radius: 25px;
+            outline: none;
+            margin: 20px 0 0;
+            &:hover {
+                background: rgb(14, 175, 54);
+                transform: scale(1.05);
+            }
+        }
+
+        .title {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: rgb(12, 14, 153);
+        }
+
+        input,
+        textarea {
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border: 2px solid rgb(13, 64, 231);
+            border-radius: 5px;
+            outline: none;
+            font-size: 1rem;
+            transition: border 0.3s;
+            
+            &:focus {
+                border-color: rgb(14, 219, 175);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
