@@ -19,7 +19,6 @@ is the equivalent of
 i = i - 1;
 Note: The entire line becomes i--;, eliminating the need for the equal sign.
 
-<<<<<<< HEAD:JS-notes.md
 ####
 to add 5 to myVar. Since this is such a common pattern, there are operators which do both a mathematical operation and assignment in one step.
 
@@ -80,6 +79,27 @@ function timesFive(num) {
   return num * 5;
 }
 const answer = timesFive(5);
-=======
->>>>>>> 713d5c4968cbeb7d44d53ebe97784001a41603fc:-JS_Notes/JS-notes.md
 
+
+####
+```js
+function nextInLine(arr, item) {
+  // Only change code below this line
+  if (arr.length === 0){
+    return item;
+  }
+  else {
+    return arr.shift();
+  }
+  // Only change code above this line
+}
+
+// Setup
+let testArr = [1, 2, 3, 4, 5];
+
+// Display code
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
+```
