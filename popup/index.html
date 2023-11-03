@@ -9,29 +9,32 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <button data-detail-target="#detail">Signal Details You don't know</button>
-    <div class="detail " id="detail">
-        <div class="detail-header">Typing Signals
-            <button data-close-button class="close-button">&times;</button>
+    <div class="detail-pop">
+        <button data-detail-target="#detail">Signal Details You don't know</button>
+        <div class="detail " id="detail">
+            <div class="detail-header">Typing Signals
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            
+            <div class="detail-body">
+                & is called an entity, pronounce as "and". It is used to display special characters in HTML.
+                &times; is used to display the multiplication sign.
+                &copy; is used to display the copyright.
+                &reg; is used to display the registered trademark.
+                &cap; is used to display the capital Greek letter Delta.
+                &amp; is used to display the ampersand character.
+                &pound; is used to display the Pound sign.
+                &dollar; is used to display the dollar sign.
+    
+                $ is pronounced as "dollar". It is used to display the dollar sign.
+                * is pronounced as "asterisk". It is used to display the multiplication sign.
+                @ is pronounced as "at". It is used to display the at sign.
+                # is pronounced as "hash". It is different from the hash sign used in URLs. C# is pronounced as "C sharp".
+            </div>
         </div>
-        
-        <div class="detail-body">
-            & is called an entity, pronounce as "and". It is used to display special characters in HTML.
-            &times; is used to display the multiplication sign.
-            &copy; is used to display the copyright.
-            &reg; is used to display the registered trademark.
-            &cap; is used to display the capital Greek letter Delta.
-            &amp; is used to display the ampersand character.
-            &pound; is used to display the Pound sign.
-            &dollar; is used to display the dollar sign.
-
-            $ is pronounced as "dollar". It is used to display the dollar sign.
-            * is pronounced as "asterisk". It is used to display the multiplication sign.
-            @ is pronounced as "at". It is used to display the at sign.
-            # is pronounced as "hash". It is different from the hash sign used in URLs. C# is pronounced as "C sharp".
-        </div>
+        <div id="overlay"></div>
     </div>
-    <div id="overlay"></div>
+
 
 </body>
 </html>
